@@ -1,0 +1,9 @@
+version: '3'
+services:
+  cv-builder:
+    build: .
+    volumes:
+      - .:/latex
+    command: pdflatex main.tex
+    stdin_open: true
+    tty: true
